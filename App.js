@@ -1,6 +1,9 @@
 import React from 'react'
-import HelloWorld from "./src/screens/HW"
+import HelloWorld from './src/screens/HW'
 
-export default App = () => (
-<HelloWorld/>
-);
+export default function App () {
+    return (
+        <HelloWorld/>
+    )
+}
+
