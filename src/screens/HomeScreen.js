@@ -1,6 +1,6 @@
 import React from 'react'
 import { StyleSheet, Text, View, Button, TouchableOpacity } from 'react-native'
-import {Enum} from '../navigation/MyStack'
+import { ScrName } from '../navigation/MyStack'
 
 
 
@@ -13,7 +13,7 @@ export const HomeScreen = props => {
           <Button 
             title="Go to another screen"
             color="#800000"
-            onPress = {() => {navigation.navigate(Enum.SECOND)}}
+            onPress = {() => {navigation.navigate(ScrName.SECOND)}}
           />
         </TouchableOpacity>
     </View>
