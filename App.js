@@ -1,6 +1,11 @@
+import 'react-native-gesture-handler'
 import React from 'react'
-import HelloWorld from "./src/screens/HW"
+import {Container} from './src/navigation/Container'
 
-export default App = () => (
-<HelloWorld/>
-);
+const App = () => {
+  return (
+    <Container/>
+  )
+}
+
+export default App;
