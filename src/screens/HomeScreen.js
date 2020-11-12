@@ -1,21 +1,23 @@
 import React from 'react'
-import {useState} from 'react'
-import { StyleSheet, Text, View, Button, TouchableOpacity, TextInput } from 'react-native'
+import { StyleSheet, Text, View, Button, TextInput } from 'react-native'
 import { SCREENS } from '../navigation/MyStack'
 
 
 
 export const HomeScreen = props => {
   const navigation = props.navigation
-    const [content, setContent] = useState('')
-    const [txt, setAnotherText] = useState ('')
+
+
+    const [content, setContent] = React.useState('')
+    const [text, setText] = React.useState ('')
+
 
     const textChangeHandler = text => {
       setContent(text)
     }
 
     const buttonClickHandler = () => { 
-         setAnotherText(content)
+         setText(content)
          setContent  ('')
     }
 
@@ -32,20 +34,18 @@ export const HomeScreen = props => {
         />
           <Button
             title="Set text value"
-            color="#556B2F"
+            color='#006400'
             onPress = {buttonClickHandler}
           />
           </View>
                 <View>
-                   <Text style = {styles.field}> {txt} </Text>
+                   <Text style = {styles.field}> {text} </Text>
                </View>
-        <TouchableOpacity>
           <Button 
             title="Go to another screen"
             color= '#006400'
             onPress = {() => {navigation.navigate(SCREENS.SECOND)}}
           />
-        </TouchableOpacity>
     </View>
   )
 }
