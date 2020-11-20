@@ -27,7 +27,7 @@ import { TextInput } from 'react-native-gesture-handler'
                 <Button 
                     title = 'Send to Home'
                     color = "#006400"
-                    onPress = {() => {navigation.goBack(callback (inText))}}
+                    onPress = {() => {callback (inText); navigation.goBack()}}
                 />
             </View>
         </View>
