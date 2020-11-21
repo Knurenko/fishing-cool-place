@@ -9,7 +9,7 @@ import { TextInput } from 'react-native-gesture-handler'
 
      const [inText, setInText] = React.useState ('')
 
-     const textInputHandler = t => {
+     const handleTextChange = t => {
          setInText(t)
      }
 
@@ -20,14 +20,14 @@ import { TextInput } from 'react-native-gesture-handler'
             <Text style = { styles.text }> Hola, Amigo! </Text>
             <View style = { styles.inputBlock}>
                 <TextInput style = {styles.inputTxt}
-                     onChangeText = {textInputHandler}
+                     onChangeText = {handleTextChange}
                      value={inText}
                      placeholder='Add...'
                 />
                 <Button 
                     title = 'Send to Home'
                     color = "#006400"
-                    onPress = {() => {callback (inText); navigation.goBack()}}
+                    onPress = {() => {callback(inText); navigation.goBack()}}
                 />
             </View>
         </View>
