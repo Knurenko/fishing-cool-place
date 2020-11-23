@@ -7,18 +7,21 @@ import { SCREENS } from '../navigation/MyStack'
 export const HomeScreen = props => {
   const navigation = props.navigation
 
-
     const [content, setContent] = React.useState('')
     const [text, setText] = React.useState ('')
 
 
     const textChangeHandler = text => {
-      setContent(text)
+         setContent(text)
     }
 
     const buttonClickHandler = () => { 
          setText(content)
          setContent  ('')
+    }
+    
+    const setHomeScreenText = textFromOtherScreen => {
+        setText (textFromOtherScreen)
     }
 
   return (
@@ -39,12 +42,12 @@ export const HomeScreen = props => {
           />
           </View>
                 <View>
-                   <Text style = {styles.field}> {text} </Text>
+                   <Text style = {styles.field}> Your message: {text} </Text>
                </View>
           <Button 
             title="Go to another screen"
             color= '#006400'
-            onPress = {() => {navigation.navigate(SCREENS.SECOND)}}
+            onPress = {() => {navigation.navigate(SCREENS.SECOND, {callback: setHomeScreenText})}}
           />
     </View>
   )

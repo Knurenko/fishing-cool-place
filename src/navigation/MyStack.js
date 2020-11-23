@@ -3,7 +3,7 @@ import {createStackNavigator} from '@react-navigation/stack'
 import {HomeScreen} from '../screens/HomeScreen'
 import {SecondScreen} from '../screens/SecondScreen'
 
-export const ScrName = {
+export const SCREENS = {
     HOME: 'Home',
     SECOND: 'Second'
 }
@@ -13,11 +13,11 @@ export const MyStack = props => {
     return (
     <Stack.Navigator>
         <Stack.Screen
-        name = {ScrName.HOME}
+        name = {SCREENS.HOME}
         component={HomeScreen}
         />
         <Stack.Screen 
-        name={ScrName.SECOND} 
+        name={SCREENS.SECOND} 
         component={SecondScreen} 
         />
     </Stack.Navigator>
