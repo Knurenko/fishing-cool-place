@@ -12,13 +12,14 @@ export const HomeScreen = props => {
 
 
     const textChangeHandler = text => {
-        setContent(text)
+         setContent(text)
     }
 
     const buttonClickHandler = () => { 
          setText(content)
          setContent  ('')
     }
+    
     const setHomeScreenText = textFromOtherScreen => {
         setText (textFromOtherScreen)
     }
