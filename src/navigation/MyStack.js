@@ -1,7 +1,7 @@
 import React from 'react'
 import {createStackNavigator} from '@react-navigation/stack'
-import {HomeScreen} from '../screens/HomeScreen'
-import {SecondScreen} from '../screens/SecondScreen'
+import {SecondScreen} from '../screens/SecondScreenComponent'
+import { HomeScreenComponent } from '../screens/HomeScreen/HomeScreenComponent'
 
 export const SCREENS = {
     HOME: 'Home',
@@ -14,7 +14,7 @@ export const MyStack = props => {
     <Stack.Navigator>
         <Stack.Screen
         name = {SCREENS.HOME}
-        component={HomeScreen}
+        component={HomeScreenComponent}
         />
         <Stack.Screen 
         name={SCREENS.SECOND} 

@@ -1,11 +1,14 @@
 import React from 'react'
-import {View, Text, StyleSheet, Button,} from 'react-native'
+import {View, Text, StyleSheet, Button} from 'react-native'
 import { TextInput } from 'react-native-gesture-handler'
+import {useDispatch} from 'react-redux'
+import {updateText} from '../redux/rootReduser'
 
     
  export const SecondScreen = props => {
      const navigation = props.navigation
-     const route = props.route
+
+     const dispatch = useDispatch()
 
      const [inText, setInText] = React.useState ('')
 
@@ -13,7 +16,10 @@ import { TextInput } from 'react-native-gesture-handler'
          setInText(t)
      }
 
-     const callback = route.params?.callback
+     const handleUpdateText = () => { 
+         dispatch(updateText(inText))
+         navigation.goBack() 
+        }
 
      return (
         <View style = {styles.container}>
@@ -27,7 +33,7 @@ import { TextInput } from 'react-native-gesture-handler'
                 <Button 
                     title = 'Send to Home'
                     color = "#006400"
-                    onPress = {() => {callback(inText); navigation.goBack()}}
+                    onPress = {handleUpdateText}
                 />
             </View>
         </View>
