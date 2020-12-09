@@ -1,6 +1,6 @@
 import React from 'react'
 import {createStackNavigator} from '@react-navigation/stack'
-import {SecondScreen} from '../screens/SecondScreenComponent'
+import {SecondScreen} from '../screens/SecondScreen'
 import { HomeScreenComponent } from '../screens/HomeScreen/HomeScreenComponent'
 
 export const SCREENS = {
